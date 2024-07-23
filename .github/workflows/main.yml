@@ -19,7 +19,7 @@ jobs:
       - name: Build, tag, and push image to Docker Hub
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/flash-demo
+          IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/flask-demo
         run: |
           docker build -t $DOCKERHUB_USERNAME/$IMAGE_NAME .
           docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:latest
