@@ -21,7 +21,7 @@ jobs:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/flash-demo
         run: |
-          dokcer build -t $DOCKERHUB_USERNAME/$IMAGE_NAME .
+          docker build -t $DOCKERHUB_USERNAME/$IMAGE_NAME .
           docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:latest
 
   test:
